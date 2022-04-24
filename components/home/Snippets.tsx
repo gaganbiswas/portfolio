@@ -11,16 +11,16 @@ function Works() {
       </h3>
       <div className="flex flex-col items-center gap-8 sm:flex-row">
         <SnippetCard
-          logo={'mailchimp.png'}
-          title="Mailchimp"
-          description=" Subscribe to a newsletter."
-          slug="mailchimp"
+          logo={'css.png'}
+          title="Navlink Hover Animation"
+          description="Underline animation on hover."
+          slug="navlink-hover-animation"
         />
         <SnippetCard
           logo={'nextjs.png'}
-          title="Razorpay Integration"
-          description="Accept a payment"
-          slug="razorpay-integration"
+          title="Razorpay"
+          description="Create an order"
+          slug="razorpay"
         />
       </div>
       <Link href="/works">

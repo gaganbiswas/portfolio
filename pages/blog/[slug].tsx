@@ -24,7 +24,13 @@ const Post: NextPage<Props> = ({ post, mdxSource }) => {
   const time = readingTime(post.body).text
 
   return (
-    <Layout>
+    <Layout
+      title={`${post.title} - Gagan Biswas`}
+      description={post.summary}
+      image={`https://gaganbiswas.com${urlFor(post.mainImage).url()}`}
+      date={new Date(post.publishedAt).toISOString()}
+      type="article"
+    >
       <article className="mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           {post.title}

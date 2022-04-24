@@ -11,18 +11,18 @@ function Posts() {
       </h3>
       <div className="flex flex-col gap-6 md:flex-row">
         <BlogCard
-          title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-          slug="style-guides-component-libraries-design-systems"
+          title="5 Best React UI Framework and Component Libraries"
+          slug="5-best-react-ui-framework-and-component-libraries"
           gradient="from-[#D8B4FE] to-[#818CF8]"
         />
         <BlogCard
-          title="Rust Is The Future of JavaScript Infrastructure"
-          slug="rust"
+          title="What is Web 3.0? "
+          slug="what-is-web3"
           gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
         />
         <BlogCard
-          title="Past, Present, and Future of React State Management"
-          slug="react-state-management"
+          title="The New React Native Architecture"
+          slug="the-new-react-native-architecture"
           gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
         />
       </div>

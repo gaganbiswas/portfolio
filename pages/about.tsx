@@ -6,12 +6,12 @@ import Layout from '../components/Layout'
 
 const About: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="About - Gagan Biswas">
       <div className="mb-16 flex w-full flex-col items-start justify-center">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           About Me
         </h1>
-        <div className="prose dark:prose-dark mb-8 leading-6">
+        <div className="prose mb-8 leading-6 dark:prose-dark">
           <h2 className="mt-8 mb-5 text-2xl font-bold text-gray-800 dark:text-white">
             Links
           </h2>
@@ -92,8 +92,8 @@ const About: NextPage = () => {
             communication between all of them. He also works as a mentor for the
             developing team of Skill Academia and is responsible for the
             development of the website of Skill Academia. As a hobby, he writes
-            blogs and snippets which helps in simplying development for other
-            developers.
+            blogs and code snippets which might help others in their web
+            journey.
           </p>
           <h3 className="mt-7 mb-2.5 text-xl font-semibold text-gray-800 dark:text-gray-100">
             Education

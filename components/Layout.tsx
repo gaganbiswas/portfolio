@@ -8,7 +8,7 @@ function Layout({ children, customMeta }: any) {
   const router = useRouter()
   const meta = {
     title: 'Gagan Biswas - Developer, designer, blogger.',
-    description: `Front-end developer, Visual and Interaction Designer, writing blog to simplify the web.`,
+    description: `Front-end developer, Visual and Interaction Designer, blogger.`,
     image: 'https://gaganbiswas.com/static/images/banner.png',
     type: 'website',
     ...customMeta,

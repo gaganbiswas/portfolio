@@ -20,7 +20,10 @@ type Props = {
 
 const Snippet: NextPage<Props> = ({ snippet, mdxSource }) => {
   return (
-    <Layout>
+    <Layout
+      title={`${snippet.title} - Code Snippet`}
+      description="A collection of code snippets - including serverless functions, Node.js scripts, and CSS tricks."
+    >
       <article className="mx-auto mb-16 flex w-full max-w-2xl flex-col items-start justify-center">
         <div className="mb-8 flex w-full justify-between">
           <div>

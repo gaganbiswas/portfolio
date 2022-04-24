@@ -24,7 +24,10 @@ const Blog: NextPage<Props> = ({ posts }) => {
   )
 
   return (
-    <Layout>
+    <Layout
+      title="Blog - Gagan Biswas"
+      description="Thoughts on the software industry, programming, technology, music, and my personal life."
+    >
       <div className="mb-16 flex max-w-2xl flex-col items-start justify-center">
         <h1 className="mb-6 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           Blog
@@ -65,16 +68,16 @@ const Blog: NextPage<Props> = ({ posts }) => {
               }}
             />
             <BlogPost
-              title="The future of Web: Web 3.0"
-              summary="Learn the fundamentals of Web 3.0 and how it is the future of the modern web as we know it."
+              title="What is Web 3.0?"
+              summary="Web 3.0 is built on decentralization and is the next evolution of the World Wide Web."
               slug={{
-                current: 'the-future-of-web',
+                current: 'what-is-web3',
               }}
             />
             <BlogPost
-              title="Next.js: Introduction"
-              summary="In this guide, you will learn about Next.js, a framework of react."
-              slug={{ current: 'nextjs-introduction' }}
+              title="The New React Native Architecture"
+              summary="React Native is a framework for building native apps using React. Recently it has released a new architecture which boosts up its performance."
+              slug={{ current: 'the-new-react-native-architecture' }}
             />
           </>
         )}

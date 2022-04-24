@@ -20,7 +20,10 @@ type Props = {
 
 const Snippets: NextPage<Props> = ({ snippets }) => {
   return (
-    <Layout>
+    <Layout
+      title="Code Snippets - Gagan Biswas"
+      description="A collection of code snippets - including serverless functions, Node.js scripts, and CSS tricks."
+    >
       <div className="mb-16 flex max-w-2xl flex-col items-start justify-center">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           Code Snippets
