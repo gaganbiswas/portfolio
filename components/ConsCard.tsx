@@ -3,7 +3,7 @@ export default function ConsCard({ title, cons }: any) {
     <div className="my-6 w-full rounded-xl border border-red-200 bg-red-50 p-6 dark:border-red-900 dark:bg-red-900">
       <span>{`You might not use ${title} if...`}</span>
       <div className="mt-4">
-        {cons.map((con) => (
+        {cons.map((con: string) => (
           <div key={con} className="mb-2 flex items-baseline font-medium">
             <div className="mr-2 h-4 w-4">
               <svg className="h-4 w-4 text-red-500" viewBox="0 0 24 24">

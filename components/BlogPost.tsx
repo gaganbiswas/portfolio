@@ -18,9 +18,6 @@ const BlogPost = ({ title, summary, slug }: Post) => {
             <h4 className="mb-2 w-full cursor-pointer text-lg font-medium text-gray-900 dark:text-gray-100 md:text-xl">
               {title}
             </h4>
-            {/* <p className="mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
-               {`${views ? new Number(views).toLocaleString() : '---'} views`} 
-            </p> */}
           </div>
           <p className="cursor-pointer text-gray-600 dark:text-gray-400">
             {summary}

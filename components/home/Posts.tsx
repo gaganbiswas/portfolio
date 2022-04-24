@@ -6,7 +6,7 @@ import BlogCard from '../BlogCard'
 function Posts() {
   return (
     <>
-      <h3 className="mb-6 mt-16 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
+      <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
         Featured Posts
       </h3>
       <div className="flex flex-col gap-6 md:flex-row">

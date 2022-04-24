@@ -1,12 +1,12 @@
 import Layout from '../../components/Layout'
-import { sanityClient } from '../../sanity'
+import { sanityClient, urlFor } from '../../sanity'
 import Image from 'next/image'
 import { parseISO, format } from 'date-fns'
 import MDXComponents from '../../components/MDXComponents'
-import { MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import readingTime from 'reading-time'
-
+import { NextPage } from 'next'
 
 type Props = {
   post: {
@@ -16,13 +16,12 @@ type Props = {
     summary: string
     mainImage: string
     estimatedReadingTime: number
-  },
+  }
   mdxSource: MDXRemoteSerializeResult
 }
 
-const Post = ({ post, mdxSource }: Props) => {
-const time = readingTime(post.body).text;
-
+const Post: NextPage<Props> = ({ post, mdxSource }) => {
+  const time = readingTime(post.body).text
 
   return (
     <Layout>
@@ -45,10 +44,19 @@ const time = readingTime(post.body).text;
             </p>
           </div>
           <p className="min-w-32 mt-2 text-sm text-gray-600 dark:text-gray-400 md:mt-0">
-           {time}
+            {time}
           </p>
         </div>
-        <div className="prose dark:prose-dark mt-4 w-full max-w-none">
+        <div className="prose mt-4 w-full max-w-none dark:prose-dark">
+          <div className="relative aspect-[4/3] w-full">
+            <Image
+              src={urlFor(post.mainImage).url()}
+              alt={post.title}
+              layout="fill"
+              className="rounded-lg"
+              priority
+            />
+          </div>
           <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
         </div>
       </article>

@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import { InferGetStaticPropsType, GetStaticProps } from 'next'
+import { InferGetStaticPropsType, GetStaticProps, NextPage } from 'next'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import { sanityClient } from '../sanity'
+
+type Props = {
+  posts: InferGetStaticPropsType<typeof getStaticProps>
+}
 
 type Post = {
   _id: string
@@ -13,7 +17,7 @@ type Post = {
   }
 }
 
-function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+const Blog: NextPage<Props> = ({ posts }) => {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((post: Post) =>
     post.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -54,21 +58,23 @@ function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
               Most Popular
             </h3>
             <BlogPost
-              title="Rust Is The Future of JavaScript Infrastructure"
-              summary="Why is Rust being used to replace parts of the JavaScript web ecosystem like minification (Terser), transpilation (Babel), formatting (Prettier), bundling (webpack), linting (ESLint), and more?"
-              slug={{ current: 'rust' }}
-            />
-            <BlogPost
-              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-              summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
+              title="5 Best React UI Framework and Component Libraries"
+              summary="5 best UI framework and component libraries to use in your next react projects."
               slug={{
-                current: 'style-guides-component-libraries-design-systems',
+                current: '5-best-react-ui-framework-and-component-libraries',
               }}
             />
             <BlogPost
-              title="Creating a Monorepo with Lerna & Yarn Workspaces"
-              summary="In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process."
-              slug={{ current: 'monorepo-lerna-yarn-workspaces' }}
+              title="The future of Web: Web 3.0"
+              summary="Learn the fundamentals of Web 3.0 and how it is the future of the modern web as we know it."
+              slug={{
+                current: 'the-future-of-web',
+              }}
+            />
+            <BlogPost
+              title="Next.js: Introduction"
+              summary="In this guide, you will learn about Next.js, a framework of react."
+              slug={{ current: 'nextjs-introduction' }}
             />
           </>
         )}

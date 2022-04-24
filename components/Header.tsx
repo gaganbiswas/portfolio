@@ -20,7 +20,7 @@ const NavItem = ({ href, text }: any) => {
           'hidden rounded-lg p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-800 sm:px-3 sm:py-2 md:inline-block'
         )}
       >
-        <span className="capsize">{text}</span>
+        <span className="capsize cursor-pointer">{text}</span>
       </a>
     </Link>
   )
@@ -41,7 +41,6 @@ function Header() {
         <div className="ml-[-0.50rem] mr-4">
           <MobileMenu />
           <NavItem text="Home" href="/" />
-          <NavItem text="Works" href="/works" />
           <NavItem text="Blog" href="/blog" />
           <NavItem text="Snippets" href="/snippets" />
         </div>
