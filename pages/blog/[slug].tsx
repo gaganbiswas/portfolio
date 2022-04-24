@@ -125,5 +125,6 @@ export const getStaticProps = async ({
       post,
       mdxSource,
     },
+    revalidate: 900,
   }
 }
