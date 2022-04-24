@@ -14,16 +14,19 @@ function Posts() {
           title="5 Best React UI Framework and Component Libraries"
           slug="5-best-react-ui-framework-and-component-libraries"
           gradient="from-[#D8B4FE] to-[#818CF8]"
+          readTime="4 min read"
         />
         <BlogCard
           title="What is Web 3.0? "
           slug="what-is-web3"
           gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
+          readTime="0 min read"
         />
         <BlogCard
           title="The New React Native Architecture"
           slug="the-new-react-native-architecture"
           gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
+          readTime="0 min read"
         />
       </div>
       <Link href="/blog">

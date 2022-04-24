@@ -86,6 +86,7 @@ export const getStaticProps = async ({
         title,
         summary,
         body,
+        logo,
     }`
 
   const snippet = await sanityClient.fetch(query, {

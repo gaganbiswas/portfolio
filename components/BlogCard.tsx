@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import Link from 'next/link'
 import React from 'react'
 
-function BlogCard({ title, slug, gradient }: any) {
+function BlogCard({ title, slug, gradient, readTime }: any) {
   return (
     <Link href={`/blog/${slug}`}>
       <a
@@ -14,7 +14,7 @@ function BlogCard({ title, slug, gradient }: any) {
       >
         <div className="flex h-full flex-col justify-between rounded-lg bg-white p-4 dark:bg-gray-900">
           <div className="flex flex-col justify-between md:flex-row">
-            <h4 className="mb-6 w-full text-lg font-medium tracking-tight text-gray-900 dark:text-gray-100 sm:mb-10 md:text-lg">
+            <h4 className="mb-6 w-full cursor-pointer text-lg font-medium tracking-tight text-gray-900 dark:text-gray-100 sm:mb-10 md:text-lg">
               {title}
             </h4>
           </div>
@@ -25,21 +25,17 @@ function BlogCard({ title, slug, gradient }: any) {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              strokeWidth={2}
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span className="capsize ml-2 align-baseline">---</span>
+            <span className="capsize ml-2 cursor-pointer align-baseline">
+              {readTime}
+            </span>
           </div>
         </div>
       </a>

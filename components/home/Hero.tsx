@@ -10,7 +10,11 @@ function Hero() {
         </h1>
         <h2 className="mb-4 text-gray-700 dark:text-gray-200">
           Chief Operations Officer at{' '}
-          <a className="font-semibold underline underline-offset-4">
+          <a
+            className="font-semibold underline underline-offset-4"
+            rel="noopener noreferrer"
+            href="https://skillacademia.com"
+          >
             Skill Academia
           </a>
         </h2>

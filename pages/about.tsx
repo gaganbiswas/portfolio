@@ -24,7 +24,7 @@ const About: NextPage = () => {
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                @gaganbiswas
+                @hiswebworld
               </a>
             </li>
             <li className="my-2 text-gray-600 dark:text-gray-200">
