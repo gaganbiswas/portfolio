@@ -108,7 +108,7 @@ const About: NextPage = () => {
             Headshots
           </h2>
           <div className="mt-7 flex flex-col gap-8 md:flex-row">
-            <div className="relative aspect-square w-full md:w-1/2">
+            <div className="relative aspect-[4/3] w-full md:w-1/2">
               <Image
                 src="/static/images/Avatar.jpg"
                 alt="Gagan Biswas"
@@ -116,7 +116,7 @@ const About: NextPage = () => {
                 layout="fill"
               />
             </div>
-            <div className="relative aspect-square w-full md:w-1/2">
+            <div className="relative aspect-[4/3] w-full md:w-1/2">
               <Image
                 src="/static/images/Avatar.jpg"
                 alt="Gagan Biswas"
