@@ -110,7 +110,7 @@ const About: NextPage = () => {
           <div className="mt-7 flex flex-col gap-8 md:flex-row">
             <div className="relative aspect-square w-full md:w-1/2">
               <Image
-                src="/static/images/Avatar.png"
+                src="/static/images/Avatar.jpg"
                 alt="Gagan Biswas"
                 objectFit="cover"
                 layout="fill"
@@ -118,7 +118,7 @@ const About: NextPage = () => {
             </div>
             <div className="relative aspect-square w-full md:w-1/2">
               <Image
-                src="/static/images/Avatar.png"
+                src="/static/images/Avatar.jpg"
                 alt="Gagan Biswas"
                 className="grayscale filter"
                 objectFit="cover"

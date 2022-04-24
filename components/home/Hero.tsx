@@ -26,7 +26,7 @@ function Hero() {
 
       <div className="relative mb-8 mr-auto w-[80px] sm:mb-0 sm:w-[176px]">
         <Image
-          src="/static/images/Avatar.png"
+          src="/static/images/Avatar.jpg"
           height={176}
           width={176}
           alt="Gagan Biswas"
