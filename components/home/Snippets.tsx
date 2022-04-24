@@ -23,7 +23,7 @@ function Works() {
           slug="razorpay"
         />
       </div>
-      <Link href="/works">
+      <Link href="/snippets">
         <a className="mt-8 flex h-6 rounded-lg leading-7 text-gray-600 transition-all hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
           View all snippets
           <ArrowNarrowRightIcon className="ml-1.5 mt-[3px] h-6 w-6 text-inherit" />
