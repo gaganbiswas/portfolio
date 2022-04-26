@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 
 const About: NextPage = () => {
   return (
-    <Layout title="About - Gagan Biswas">
+    <Layout customMeta={{ title: 'About - Gagan Biswas' }}>
       <div className="mb-16 flex w-full flex-col items-start justify-center">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           About Me

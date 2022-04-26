@@ -25,8 +25,11 @@ const Blog: NextPage<Props> = ({ posts }) => {
 
   return (
     <Layout
-      title="Blog - Gagan Biswas"
-      description="Thoughts on the software industry, programming, technology, music, and my personal life."
+      customMeta={{
+        title: 'Blog - Gagan Biswas',
+        description:
+          'Thoughts on the software industry, programming, technology, music, and my personal life.',
+      }}
     >
       <div className="mb-16 flex max-w-2xl flex-col items-start justify-center">
         <h1 className="mb-6 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">

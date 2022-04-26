@@ -21,15 +21,18 @@ type Props = {
 const Snippets: NextPage<Props> = ({ snippets }) => {
   return (
     <Layout
-      title="Code Snippets - Gagan Biswas"
-      description="A collection of code snippets - including serverless functions, Node.js scripts, and CSS tricks."
+      customMeta={{
+        title: 'Code Snippets - Gagan Biswas',
+        description:
+          'A collection of code snippets - including serverless functions, Node.js scripts, and CSS tricks.',
+      }}
     >
       <div className="mb-16 flex max-w-2xl flex-col items-start justify-center">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl">
           Code Snippets
         </h1>
         <p className="mb-4 text-gray-600 dark:text-gray-400">
-          These are a collection of code snippets I've used in the past and
+          These are a collection of code snippets I&apos;ve used in the past and
           saved. Some are Serverless Functions, which include set up
           instructions. Others are anything from random CSS snippets to Node.js
           scripts.
