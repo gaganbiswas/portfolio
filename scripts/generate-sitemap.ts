@@ -29,7 +29,7 @@ export default async function generateSitemap() {
           const route = path === '/index' ? '' : path
           return `
             <url>
-                <loc>${`https://gaganbiswas.com${route}`}</loc>
+                <loc>${`https://www.gaganbiswas.com${route}`}</loc>
             </url>
           `
         })
@@ -39,7 +39,7 @@ export default async function generateSitemap() {
           .map((post: any) => {
             return `
           <url>
-              <loc>${`https://gaganbiswas.com/${post.slug.current}`}</loc>
+              <loc>${`https://www.gaganbiswas.com/${post.slug.current}`}</loc>
           </url>
         `
           })
