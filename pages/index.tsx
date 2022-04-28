@@ -21,8 +21,8 @@ const Home: NextPage = () => {
 export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
-  generateSitemap()
   generateRss()
+  generateSitemap()
 
   return {
     props: {},
