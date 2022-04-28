@@ -39,7 +39,7 @@ export default async function generateSitemap() {
           .map((post: any) => {
             return `
           <url>
-              <loc>${`https://gaganbiswas.com${post.slug.current}`}</loc>
+              <loc>${`https://gaganbiswas.com/${post.slug.current}`}</loc>
           </url>
         `
           })
