@@ -9,10 +9,6 @@ module.exports = {
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
     if (!dev && !isServer) {
-      config.node = {
-        fs: 'empty',
-        path: false,
-      }
       Object.assign(config.resolve.alias, {
         'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
         react: 'preact/compat',
