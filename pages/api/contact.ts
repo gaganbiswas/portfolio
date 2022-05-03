@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = req.body
 
   const transporter = nodemailer.createTransport({
@@ -34,3 +34,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(500).json({ status: 'Internal Server Error' })
   }
 }
+
+export default handler
