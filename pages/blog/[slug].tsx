@@ -62,7 +62,7 @@ const Post: NextPage<Props> = ({ post, mdxSource }) => {
               alt={post.title}
               layout="fill"
               className="rounded-lg"
-              priority
+              priority={true}
             />
           </div>
           <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
