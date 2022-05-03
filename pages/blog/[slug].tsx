@@ -5,7 +5,7 @@ import { parseISO, format } from 'date-fns'
 import MDXComponents from '../../components/MDXComponents'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import readingTime from 'reading-time'
+import readingTime from 'reading-time/lib/reading-time'
 import { NextPage } from 'next'
 
 type Props = {
@@ -21,7 +21,7 @@ type Props = {
 }
 
 const Post: NextPage<Props> = ({ post, mdxSource }) => {
-  const time = readingTime(post.body).text
+  const readTime = readingTime(post.body).text
 
   return (
     <Layout
@@ -52,7 +52,7 @@ const Post: NextPage<Props> = ({ post, mdxSource }) => {
             </p>
           </div>
           <p className="min-w-32 mt-2 text-sm text-gray-600 dark:text-gray-400 md:mt-0">
-            {time}
+            {readTime}
           </p>
         </div>
         <div className="prose mt-4 w-full max-w-none dark:prose-dark">
