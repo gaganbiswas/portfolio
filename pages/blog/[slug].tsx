@@ -107,7 +107,6 @@ export const getStaticProps = async ({
       summary,
       mainImage,
       body,
-      "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
   }`
 
   const post = await sanityClient.fetch(query, {

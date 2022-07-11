@@ -15,7 +15,7 @@ type Snippet = {
 }
 
 type Props = {
-  snippets: [Snippet]
+  snippets: Snippet[]
 }
 
 const Snippets: NextPage<Props> = ({ snippets }) => {

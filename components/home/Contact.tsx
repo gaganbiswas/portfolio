@@ -13,7 +13,7 @@ function Contact() {
     handleSubmit,
   } = useForm()
 
-  const onSubmitHandler = async (data: Object) => {
+  const onSubmitHandler = async (data: any) => {
     setIsLoading(true)
     setError(false)
     setSuccess(false)
