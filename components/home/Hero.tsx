@@ -11,7 +11,7 @@ function Hero() {
         <h2 className="mb-4 font-medium text-gray-700 dark:text-gray-200">
           Front-end developer.
           <br />
-          Visual and Interaction Designer.
+          Visual Designer.
         </h2>
         <p className="text-gray-600 dark:text-gray-400">
           Designing & developing websites that not only looks good but are also
