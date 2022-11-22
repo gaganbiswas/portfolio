@@ -17,22 +17,11 @@ const About: NextPage = () => {
           </h2>
           <ul className="list-inside list-disc pl-3 text-gray-600 dark:text-gray-200">
             <li className="my-2 text-gray-600 dark:text-gray-200">
-              Twitter:{' '}
-              <a
-                href="https://twitter.com/gaganbiswas"
-                className="text-blue-400 underline hover:text-blue-600"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                @hiswebworld
-              </a>
-            </li>
-            <li className="my-2 text-gray-600 dark:text-gray-200">
               GitHub:{' '}
               <a
                 href="https://github.com/gaganbiswas"
                 className="text-blue-400 underline hover:text-blue-600"
-                rel="noreferrer noopener"
+                rel="noopener"
                 target="_blank"
               >
                 @gaganbiswas
@@ -51,10 +40,22 @@ const About: NextPage = () => {
               <a
                 href="https://www.linkedin.com/in/gaganbiswas/"
                 className="text-blue-400 underline hover:text-blue-600"
-                rel="noreferrer noopener"
+                rel="noopener"
                 target="_blank"
               >
                 https://www.linkedin.com/in/gaganbiswas
+              </a>
+            </li>
+            <li className="my-2 text-gray-600 dark:text-gray-200">
+              Resume:{' '}
+              <a
+                href="https://drive.google.com/file/d/1FCv1R9i6PqETTFIOjxKtuGPVYxPTYpT3/view?usp=share_link"
+                className="text-blue-400 underline hover:text-blue-600"
+                rel="noopener"
+                target="_blank"
+                download={true}
+              >
+                Download
               </a>
             </li>
           </ul>
@@ -65,35 +66,33 @@ const About: NextPage = () => {
             Job Title
           </h3>
           <p className="mb-5 text-gray-600 dark:text-gray-200">
-            Gagan Biswas, Chief Operation Officer at{' '}
-            <a
-              className="cursor-pointer text-blue-400 underline transition-colors duration-200 hover:text-blue-600"
-              href="https://www.skillacademia.com"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              Skill Academia.
-            </a>
+            Gagan Biswas, Front-end developer.
           </p>
           <h3 className="mt-7 mb-2.5 text-xl font-semibold text-gray-800 dark:text-gray-100">
             Long, 3rd Person
           </h3>
           <p className="mb-5 text-gray-600 dark:text-gray-200">
-            Gagan Biswas is the Chief Operation Officer at{' '}
+            Gagan Biswas is a Front-end Developer and Visual Designer from
+            Kolkata, India. He is experienced in working with the modern web
+            technologies like React and Nextjs. He has prior experience in
+            working as the Senior Developer at{' '}
             <a
               href="https://www.skillacademia.com"
-              rel="noreferrer noopener"
+              rel="noopener"
               target="_blank"
-              className="text-blue-400 underline transition-colors duration-200 hover:text-blue-600"
             >
               Skill Academia
+            </a>{' '}
+            and as a Front-end developer at{' '}
+            <a
+              href="https://www.facebook.com/mediainminutesofficial"
+              rel="noopener"
+              target="_blank"
+            >
+              Media InMinutes
             </a>
-            , where he is incharge of managing different teams and ensure smooth
-            communication between all of them. He also works as a mentor for the
-            developing team of Skill Academia and is responsible for the
-            development of the website of Skill Academia. As a hobby, he writes
-            blogs and code snippets which might help others in their web
-            journey.
+            . As a hobby, he writes blogs, code snippets and contributes to the
+            open source community.
           </p>
           <h3 className="mt-7 mb-2.5 text-xl font-semibold text-gray-800 dark:text-gray-100">
             Education
@@ -110,7 +109,7 @@ const About: NextPage = () => {
           <div className="mt-7 flex flex-col gap-8 md:flex-row">
             <div className="relative aspect-[4/3] w-full md:w-1/2">
               <Image
-                src="/static/images/Avatar.jpg"
+                src="/static/images/Avatar.png"
                 alt="Gagan Biswas"
                 objectFit="cover"
                 layout="fill"
@@ -118,7 +117,7 @@ const About: NextPage = () => {
             </div>
             <div className="relative aspect-[4/3] w-full md:w-1/2">
               <Image
-                src="/static/images/Avatar.jpg"
+                src="/static/images/Avatar.png"
                 alt="Gagan Biswas"
                 className="grayscale filter"
                 objectFit="cover"

@@ -58,7 +58,7 @@ function Contact() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <input
             aria-label="Full Name"
-            placeholder="Jack Sparrow"
+            placeholder="Your name"
             type="text"
             minLength={3}
             required={true}
@@ -67,7 +67,7 @@ function Contact() {
           />
           <input
             aria-label="Email Address"
-            placeholder="jack@pirate.com"
+            placeholder="Your email"
             type="email"
             autoComplete="email"
             required={true}
@@ -77,7 +77,7 @@ function Contact() {
         </div>
         <textarea
           aria-label="Your Message"
-          placeholder="Message"
+          placeholder="Your message..."
           required={true}
           minLength={20}
           className="mt-4 block min-h-[120px] w-full rounded-md border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100"
