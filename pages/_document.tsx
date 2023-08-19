@@ -25,7 +25,7 @@ export default function Document() {
           sizes="32x32"
           href="/static/favicons/favicon-32x32.png"
         />
-        <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
+        <link href="/static/favicons/favicon.ico" rel="icon" />
         <link
           rel="icon"
           type="image/png"

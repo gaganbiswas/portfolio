@@ -21,7 +21,7 @@ const About: NextPage = () => {
               <a
                 href="https://github.com/gaganbiswas"
                 className="text-blue-400 underline hover:text-blue-600"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 @gaganbiswas
@@ -40,7 +40,7 @@ const About: NextPage = () => {
               <a
                 href="https://www.linkedin.com/in/gaganbiswas/"
                 className="text-blue-400 underline hover:text-blue-600"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 https://www.linkedin.com/in/gaganbiswas
@@ -51,7 +51,7 @@ const About: NextPage = () => {
               <a
                 href="https://drive.google.com/file/d/1FCv1R9i6PqETTFIOjxKtuGPVYxPTYpT3/view?usp=share_link"
                 className="text-blue-400 underline hover:text-blue-600"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
                 download={true}
               >
@@ -78,7 +78,7 @@ const About: NextPage = () => {
             working as the Senior Developer at{' '}
             <a
               href="https://www.skillacademia.com"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Skill Academia
@@ -86,7 +86,7 @@ const About: NextPage = () => {
             and as a Front-end developer at{' '}
             <a
               href="https://www.facebook.com/mediainminutesofficial"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Media InMinutes

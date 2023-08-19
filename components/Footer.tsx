@@ -21,7 +21,7 @@ function Footer() {
             <a
               className="text-gray-500 transition hover:text-gray-600"
               href="https://drive.google.com/file/d/1FCv1R9i6PqETTFIOjxKtuGPVYxPTYpT3/view?usp=share_link"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
               download={true}
             >
@@ -46,7 +46,7 @@ function Footer() {
             <a
               className="text-gray-500 transition hover:text-gray-600"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="https://twitter.com/hiswebworld"
             >
               Twitter
@@ -54,7 +54,7 @@ function Footer() {
             <a
               className="text-gray-500 transition hover:text-gray-600"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="https://github.com/gaganbiswas"
             >
               GitHub
@@ -62,7 +62,7 @@ function Footer() {
             <a
               className="text-gray-500 transition hover:text-gray-600"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="https://www.instagram.com/the_narcissist_guy/"
             >
               Instagram
@@ -77,7 +77,7 @@ function Footer() {
           <a
             className="text-blue-500 underline underline-offset-4 hover:text-blue-600"
             href="https://leerob.io"
-            rel="noopener"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Lee Robinson
