@@ -1,11 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
+import Isemail from 'isemail'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = req.body
 
   if (!name || !email || !message) {
     res.status(400).json({ status: 'One or more fields are empty' })
+  }
+
+  if (!Isemail.validate(email)) {
+    res.status(400).json({ status: 'Invalid email address' })
   }
 
   if (message.length <= 20) {
