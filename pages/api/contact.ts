@@ -4,6 +4,16 @@ import nodemailer from 'nodemailer'
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message } = req.body
 
+  if (!name || !email || !message) {
+    res.status(400).json({ status: 'One or more fields are empty' })
+  }
+
+  if (message.length <= 20) {
+    res
+      .status(400)
+      .json({ status: 'Message should be atleast 20 characters long' })
+  }
+
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
