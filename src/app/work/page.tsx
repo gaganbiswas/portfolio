@@ -16,7 +16,7 @@ const Work = () => {
       </div>
 
       <div className="my-5">
-        <p className="text-lg mb-2 font-medium">Research</p>
+        <h2 className="text-xl mb-2 font-medium">Research:</h2>
         <ul className="text-lg list-disc list-inside space-y-1 indent-2">
           <li className="dark:text-neutral-400 text-neutral-600">
             Emotion Aware Conversational Agents (Work in progress)
@@ -25,7 +25,7 @@ const Work = () => {
       </div>
 
       <div className="my-5">
-        <p className="text-lg mb-2 font-medium">Projects</p>
+        <h2 className="text-xl mb-2 font-medium">Projects:</h2>
         <ul className="text-lg list-disc list-inside space-y-1 indent-2">
           <li>
             <Link
