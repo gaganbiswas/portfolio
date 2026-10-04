@@ -1,15 +1,22 @@
-import ThemeButton from "@/components/theme-button";
+import Header from "@/components/header";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Work | Gagan Biswas",
+  description:
+    "Research, projects and freelance work by Gagan Biswas, from LLM hallucination reduction and emotion-aware conversational agents to end-to-end encrypted chat.",
+};
 
 const Work = () => {
   return (
     <main className="w-full md:mt-12">
-      <ThemeButton />
+      <Header />
       <div className="mb-1">
         <h1 className="text-2xl md:text-3xl font-medium">Work</h1>
         <Link
           href={"/"}
-          className="dark:text-neutral-400 text-neutral-600 text-lg"
+          className="dark:text-neutral-400 text-neutral-600 text-lg underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-300 dark:hover:text-neutral-200 transition-colors"
         >
           Back to home
         </Link>
@@ -21,7 +28,7 @@ const Work = () => {
           <li>
             <Link
               href={"/work/llm-hallucinations"}
-              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
             >
               Reducing LLM Hallucinations in Medical Question-Answering
             </Link>
@@ -33,7 +40,7 @@ const Work = () => {
           <li>
             <Link
               href={"/work/emotion-aware-agent"}
-              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
             >
               Emotion-Aware Conversational Agent
             </Link>
@@ -51,7 +58,7 @@ const Work = () => {
           <li>
             <Link
               href={"/work/whisper"}
-              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
             >
               Whisper
             </Link>
@@ -63,13 +70,25 @@ const Work = () => {
           <li>
             <Link
               href={"/work/struct-icons"}
-              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
             >
               Struct Icons
             </Link>
             <span className="dark:text-neutral-400 text-neutral-600">
               {" "}
               (16x16 icon set)
+            </span>
+          </li>
+          <li>
+            <Link
+              href={"/work/anglescript"}
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
+            >
+              AngleScript
+            </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (online HTML, CSS and JS editor)
             </span>
           </li>
         </ul>
@@ -83,9 +102,9 @@ const Work = () => {
               href={"https://assentonline.com"}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
             >
-              Assent
+              Assent Concerns Pvt Ltd
             </Link>
             <span className="dark:text-neutral-400 text-neutral-600">
               {" "}
@@ -98,7 +117,7 @@ const Work = () => {
               href={"https://srisitaramvaidicasm.com"}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
             >
               Sri Sitaram Vaidic Adarsha Sanskrit Mahavidyalaya
             </Link>

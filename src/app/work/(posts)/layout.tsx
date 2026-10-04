@@ -1,4 +1,4 @@
-import ThemeButton from "@/components/theme-button";
+import Header from "@/components/header";
 
 export default function PostLayout({
   children,
@@ -7,7 +7,7 @@ export default function PostLayout({
 }>) {
   return (
     <main className="w-full md:mt-12">
-      <ThemeButton />
+      <Header />
       {children}
     </main>
   );

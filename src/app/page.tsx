@@ -1,10 +1,10 @@
-import ThemeButton from "@/components/theme-button";
+import Header from "@/components/header";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="w-full md:mt-12">
-      <ThemeButton />
+      <Header />
       <h1 className="text-2xl md:text-3xl mb-1 font-medium">Gagan Biswas</h1>
       <p className="my-5 text-lg">
         I&apos;m a{" "}
@@ -31,30 +31,20 @@ export default function Home() {
       <p className="my-5 text-lg">
         You can find more about my{" "}
         <Link
-          className="font-medium underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+          className="font-medium underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
           href={"/work"}
         >
           work, research and projects
-        </Link>{" "}
-        or checkout my{" "}
-        <Link
-          className="font-medium underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
-          href={"https://github.com/gaganbiswas"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub{" "}
         </Link>
-        to explore more projects, or{" "}
+        {", "}
+        and{" "}
         <Link
-          className="font-medium underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
-          href={"mailto:gaganbiswas.me1@gmail.com"}
-          target="_blank"
-          rel="noopener noreferrer"
+          className="font-medium underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors"
+          href={"/skills"}
         >
-          reach out
-        </Link>{" "}
-        to me.
+          skills
+        </Link>
+        .
       </p>
     </main>
   );

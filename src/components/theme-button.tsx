@@ -9,7 +9,7 @@ const ThemeButton = () => {
   return (
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="mb-5 cursor-pointer text-lg underline underline-offset-[2.5px] decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+      className="mb-5 cursor-pointer text-lg underline underline-offset-[2.5px] decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-300 dark:hover:text-neutral-200 transition-colors"
     >
       Toggle to <span className="dark:hidden">dark</span>
       <span className="hidden dark:inline">light</span>

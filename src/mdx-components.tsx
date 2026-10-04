@@ -2,12 +2,10 @@ import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 
 const linkClass =
-  "underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors";
+  "underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:text-neutral-50 dark:decoration-neutral-500 dark:hover:decoration-neutral-200 transition-colors";
 
 const components: MDXComponents = {
-  h1: (props) => (
-    <h1 className="text-2xl md:text-3xl font-medium" {...props} />
-  ),
+  h1: (props) => <h1 className="text-2xl md:text-3xl font-medium" {...props} />,
   h2: (props) => <h2 className="text-xl mt-10 mb-2 font-medium" {...props} />,
   h3: (props) => <h3 className="text-lg mt-8 mb-2 font-medium" {...props} />,
   p: (props) => <p className="my-5 text-lg" {...props} />,

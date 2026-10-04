@@ -1,0 +1,35 @@
+import Image from "next/image";
+import Link from "next/link";
+import editor from "./editor.png";
+
+export const metadata = {
+  title: "AngleScript | Gagan Biswas",
+  description: "A lightweight online editor for HTML, CSS and JavaScript with a live preview, built with React.",
+};
+
+# AngleScript
+
+<Link href="/work" className="mt-1 inline-block dark:text-neutral-400 text-neutral-600 text-lg">Back to work</Link>
+
+AngleScript is a lightweight online editor for HTML, CSS and JavaScript that I built with React in 2021. You write code in three panes and see the result render live underneath, without touching the project you're actually working on. You can try it at [gaganbiswas.github.io/anglescript](https://gaganbiswas.github.io/anglescript), and the code is on [GitHub](https://github.com/gaganbiswas/anglescript).
+
+<Image
+  src={editor}
+  alt="AngleScript with HTML, CSS and JS editor panes along the top and a live preview below showing the text 'This pen is fun!'"
+  placeholder="blur"
+  className="w-full h-auto my-8 rounded-lg border border-neutral-300 dark:border-neutral-800"
+/>
+
+## What it's for
+
+It's handy for trying out a small snippet before putting it into a real project, so you can catch bugs in a few lines of code without breaking the app around them. Because the output renders live, it also works for coding interviews.
+
+## How it works
+
+Each pane is a CodeMirror editor with line numbers, line wrapping and auto-closing brackets and tags, and any pane can be collapsed to give the others more room. Whatever you type is saved to local storage, so it's still there when you come back.
+
+The preview is a sandboxed iframe. About 800ms after you stop typing, the HTML, CSS and JavaScript get stitched into a single page and loaded into it, so your scripts run in isolation from the editor itself.
+
+## What doesn't work yet
+
+It's built for desktop and isn't responsive, so it's hard to use on a phone. If you'd like to help with that or add something else, [get in touch](mailto:gaganbiswas.me1@gmail.com).
