@@ -9,8 +9,8 @@ export default function Home() {
       <p className="my-5 text-lg">
         I&apos;m a{" "}
         <span className="font-semibold">developer and research aspirant</span>.
-        I have been working in web and mobile apps development for the past five
-        years and have recently embarked on my research journey.
+        I have been working in web and mobile apps development for the past
+        three years and have recently commenced on my research journey.
       </p>
       <p className="my-5 text-lg">
         My research interests are broadly in NLP and AI, with a particular focus
