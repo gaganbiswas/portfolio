@@ -1,0 +1,64 @@
+import Link from "next/link";
+import Figure from "@/components/figure";
+import ingestion from "./ingestion.png";
+import architecture from "./architecture.png";
+
+export const metadata = {
+  title: "Reducing LLM Hallucinations in Medical QA | Gagan Biswas",
+  description:
+    "A medical chatbot that grounds LLM answers in NHS UK content using a Retrieval-Augmented Generation pipeline.",
+};
+
+# Optimising Large Language Models for Medical Question-Answering: Reducing Hallucinations Using Retrieval Augmented Generation
+
+<Link href="/work" className="mt-1 inline-block dark:text-neutral-400 text-neutral-600 text-lg">Back to work</Link>
+
+<p className="my-5 text-lg dark:text-neutral-400 text-neutral-600">Cameron Wishart, Valentin Peron, Gagan Biswas, Antoine Esman, Matthias von Rakowski, Arne Jacobs and Adrien Jacquot<br />Heriot-Watt University</p>
+
+## Abstract
+
+Large language models can produce both strong and accurate answers in almost any subject. However, they often generate incorrect or factually unfounded responses. These inaccurate generations are called hallucinations, and they pose a critical risk when implemented in sensitive domains such as healthcare. This paper presents a medical chatbot, designed to ground responses of the large language model with the content of the NHS UK website. The system utilises a configuration-driven Retrieval-Augmented Generation (RAG) pipeline. This architecture incorporates a late adaptive chunking strategy, semantic retrieval via a vector database and a cross-encoder reranker. To ensure medical safety and factual grounding, the pipeline integrates an intent classifier, an LLM-as-a-Judge to verify response content and additional guardrails that evaluate reliability before displaying the response. Responses outside the scope of NHS knowledge are handled with a refusal mechanism. Evaluation is conducted through automated testing using LLM-as-a-Judge and human analysis of responses. The results demonstrated high faithfulness with 92% accuracy to the provided context, strong refusal and conversational capabilities.
+
+## Diagrams
+
+<Figure
+  src={ingestion}
+  caption="Ingestion and indexing pipeline"
+  alt="Ingestion pipeline: NHS website pages are converted to Markdown and stored in SQLite, then split by adaptive chunking and combined with a full document embedding through late chunking before being stored in a Qdrant database"
+/>
+
+<Figure
+  src={architecture}
+  caption="System architecture and query execution workflow"
+  alt="Query workflow: a user query is contextualised, rewritten and checked by an intent classifier, then embedded and matched against Qdrant (top 100), reranked by ZeroEntropy (top 10) and checked by a judge LLM. If the context is sufficient the generation LLM answers and guardrails check citations, otherwise the system politely refuses or asks for clarification. Verified responses are stored in conversation memory"
+/>
+
+## Results
+
+Mean scores on the generated dataset (built from the NHS UK website) and the HealthFC dataset. "Answered" excludes questions the system refused.
+
+| Metric | Generated (all) | Generated (answered) | HealthFC (all) | HealthFC (answered) |
+| :-- | --: | --: | --: | --: |
+| Context precision | 0.694 | 0.792 | 0.348 | 0.357 |
+| Context relevance | 0.743 | 0.874 | 0.356 | 0.440 |
+| Faithfulness | 0.789 | **0.915** | 0.442 | 0.575 |
+| ROUGE-1 | 0.312 | 0.331 | 0.204 | 0.181 |
+| ROUGE-2 | 0.155 | 0.177 | 0.051 | 0.024 |
+| ROUGE-L | 0.236 | 0.257 | 0.133 | 0.113 |
+| BERTScore precision | 0.825 | 0.821 | 0.847 | 0.841 |
+| BERTScore recall | 0.893 | 0.901 | 0.861 | 0.859 |
+| BERTScore F1 | 0.857 | 0.858 | 0.854 | 0.850 |
+
+## Conclusion
+
+In conclusion, this paper describes a system that mitigates hallucinations of LLMs by enhancing the context of a question with the documents provided by a knowledge database. Regarding the database, the system will refuse to answer a question which is out of scope or ask for clarification if too vague. State of the art methods were used to optimise the pipeline, including query rewrites, document reranking and a context judge. This allows the LLM to receive enhanced context with the best chunks of from the database regarding the query. Then, guardrails and filtering are in place after the retrieval step to determine whether the model should proceed with generating the response, decline to answer the query, or request clarification in case the retrieved context is insufficient.
+
+The results demonstrate a robust system that can reliably answer users' queries and generate appropriate citations or redirections for the user to follow. It is also capable of holding a conversation, referring back to previous conditions and contexts discussed.
+
+The datasets for evaluation were challenging to curate as the NHS website has very particular and general information, meaning niche and obscure questions could be mistaken for out of context, as discussed in Section 7. This could be mitigated by incorporating additional data sources into the vector database to provide a deeper and more comprehensive set of trusted knowledge to address questions that the current system cannot answer.
+
+Computational power was also a limitation, as the rag pipeline required multiple steps, and evaluation required substantial context to complete. The addition of a multi-step conversation evaluation dataset would provide further quantitative analysis of the system.
+
+Another limitation was the time. The authors had to reduce their initial ambition due to the project's deadline. Features were explored, such as GraphRAG (Edge et al., 2025), LightRAG (Guo et al., 2025) and long term conversational history (Maharana et al., 2024; Wang et al., 2025), but couldn't be implemented due to the time constraints and are proposed as future work.
+
+In this paper, the implementation of the conversational pipeline is both trustworthy and robust and can accurately provide NHS approved information to users seeking treatments or information about their conditions.

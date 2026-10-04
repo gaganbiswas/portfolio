@@ -1,0 +1,61 @@
+import Image from "next/image";
+import Link from "next/link";
+import welcome from "./welcome.png";
+import chat from "./chat.png";
+
+export const metadata = {
+  title: "Whisper | Gagan Biswas",
+  description: "An end-to-end encrypted chat app I built to learn how the Signal protocol works.",
+};
+
+# Whisper
+
+<Link href="/work" className="mt-1 inline-block dark:text-neutral-400 text-neutral-600 text-lg">Back to work</Link>
+
+Whisper is an end-to-end encrypted chat app I've been building. It runs on iOS, Android and the web from one Expo codebase. You can try the web version at [whisper.gaganbiswas.com](https://whisper.gaganbiswas.com), and the code is on [GitHub](https://github.com/gaganbiswas/whisper).
+
+<div className="grid grid-cols-2 gap-4 max-w-lg mx-auto my-8">
+  <Image
+    src={welcome}
+    alt="Whisper's welcome screen on a phone, with an illustration of a padlock over a chat"
+    placeholder="blur"
+    className="w-full h-auto rounded-2xl border border-neutral-300 dark:border-neutral-800"
+  />
+  <Image
+    src={chat}
+    alt="An open conversation in Whisper, with sent and received messages showing delivered and seen ticks. The contact's email is blurred"
+    placeholder="blur"
+    className="w-full h-auto rounded-2xl border border-neutral-300 dark:border-neutral-800"
+  />
+</div>
+
+## Why
+
+Pretty much every chat app says it's end-to-end encrypted, and I'd always just taken that on trust. I wanted to know what actually happens to a message between two phones, and building one seemed like the best way to find out. So I read Signal's specs for X3DH and the Double Ratchet and implemented both.
+
+This is a learning project. "Don't roll your own crypto" is good advice and I mostly followed it: I didn't write any of the primitives, those come from the [noble](https://paulmillr.com/noble/) libraries. What I wrote is the protocol on top of them. I wouldn't use Whisper over Signal for anything that matters.
+
+## How it works
+
+When you sign in, your device generates an Ed25519 identity key, a signed prekey and 100 one-time prekeys. Only the public halves get uploaded. The private keys stay on the device, in the Keychain or Keystore on mobile and in IndexedDB on the web.
+
+To message someone, your device fetches their key bundle, checks the signature on their prekey and runs X3DH to agree on a shared secret, even if they're offline. That secret seeds a Double Ratchet, so every message gets its own key and the keys rotate whenever the conversation changes direction. Each device has its own session, so a message is encrypted separately for every device the other person is logged in on (and your own other devices too).
+
+Messages are encrypted with XChaCha20-Poly1305. The spec suggests AES-CBC with HMAC, but XChaCha's 24 byte nonce is big enough that I can just generate one at random and not worry about reuse.
+
+The server is Bun, Express and a WebSocket relay. It never sees plaintext. Accounts and public keys live in SQLite, and encrypted messages sit in Redis until the recipient's device picks them up and acks them. Anything undelivered expires after 30 days. You log in with a 6 digit code sent to your email, and the auth routes are rate limited per IP and per email so nobody can spam codes.
+
+## What doesn't work yet
+
+- Text only. No photos, files or voice notes.
+- One-to-one chats only, no groups.
+- No push notifications.
+- No safety numbers, so you can't check you're talking to the right person.
+- A new device doesn't get your old messages.
+- Messages waiting on the server are lost if you log in again on the same device.
+- Read receipts aren't encrypted, so the server can see when a message was delivered or seen.
+- Signed prekeys never rotate.
+
+## What's next
+
+It's still under active development, so expect rough edges. If something breaks, or you spot a mistake in how I've done the crypto, I'd honestly like to [hear about it](mailto:gaganbiswas.me1@gmail.com).

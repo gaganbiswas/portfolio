@@ -1,0 +1,29 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Emotion-Aware Conversational Agent | Gagan Biswas",
+  description:
+    "MSc dissertation: a lightweight multimodal causal emotion classifier coupled with an LLM to build an emotion-aware conversational agent, evaluated with human participants.",
+};
+
+# Emotion-Aware Conversational Agent
+
+<Link href="/work" className="mt-1 inline-block dark:text-neutral-400 text-neutral-600 text-lg">Back to work</Link>
+
+<p className="my-5 text-lg dark:text-neutral-400 text-neutral-600">Gaganendra Nath Biswas<br />MSc Artificial Intelligence dissertation, Heriot-Watt University<br />Supervised by Dr. David Robb</p>
+
+## Abstract
+
+In recent years, conversational agents (CAs) have been widely used across various sectors, including healthcare, education, virtual assistance, and customer service. As CAs become increasingly important in daily life, it is essential for them to evolve and adapt their responses based on users' emotional states. Despite this importance, many existing conversational agents primarily focus on task completion and lack emotional awareness. Although significant progress has been made in Emotion Recognition (ER), the integration of emotion recognition systems with conversational agents to generate emotionally aware responses remains an under-explored area. Furthermore, most emotion-aware conversational agents have not been evaluated through human evaluation in live conversational settings.
+
+This study proposes a multi-modal causal emotion classifier developed using a Graph Attention Network (GAT) that utilises both audio and text modalities to detect users' emotions during live conversations. The proposed classifier achieved a weighted-F1 score of 61.26% on MELD and 65.42%/76.51% on the IEMOCAP 6-class/4-class tasks, respectively. For cross-linguistic comparison, the classifier trained on the IEMOCAP 4-class task was evaluated on the Berlin EmoDB dataset and achieved a weighted-F1 score of 46.1%. The proposed model has 0.3M trainable parameters and is ∼95% smaller in size than some of the recently published models while maintaining comparable performance.
+
+For human evaluation, the classifier was coupled with the gemini-2.5-flash model to create an emotion-aware conversational agent (ECA) capable of generating empathetic responses. A non-emotion-aware conversational agent (NECA) was also implemented using the same gemini-2.5-flash model, with emotional awareness disabled through prompt engineering, to enable a fair comparison. Compared with the NECA, the proposed ECA achieved significantly higher user satisfaction on the PARADISE scale (p &lt; .001, d<sub>z</sub> = 1.74) and significantly higher perceived empathy on the PETS scale (p &lt; .001, d<sub>z</sub> = 2.76). The human evaluation methodology used in this study can be applied in future research to compare conversational agents in terms of user satisfaction and perceived empathy.
+
+## Conclusion
+
+In conclusion, this study successfully developed and evaluated a lightweight multimodal (audio and text) causal graph-based emotion classifier that achieves performance comparable to that of substantially larger models. The proposed classifier attained a weighted-F1 score of 61.26% on MELD and 65.42%/76.51% on the IEMOCAP 6/4-class, outperforming existing models on MELD dataset such as DMCGES (60.34%), GraphMFT (58.37%) and MMGCN (58.65%), while using only ∼0.3M trainable parameters and being approximately ∼95% smaller than comparable systems such as DMCGES whose classifier model size is ∼52 MB.
+
+In addition, this study coupled the proposed classifier with a large language model to produce an emotion-aware conversational agent capable of detecting a user's emotional state during live conversation and generating an appropriate response based on the perceived emotion. The cross-corpus generalisability of the classifier was also assessed, and the results indicate that further research is required to achieve stronger transfer performance.
+
+Furthermore, the conversational agent was evaluated with human participants, an evaluation that most existing studies omit, which proved 2 of the hypotheses proposed in this study: i) ECA significantly improves user satisfaction than NECA ii) ECA provides higher levels of emotional support to users compared to NECA. Finally, this research has addressed several existing gaps in the literature and identified further avenues for future work.

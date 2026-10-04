@@ -11,15 +11,36 @@ const Work = () => {
           href={"/"}
           className="dark:text-neutral-400 text-neutral-600 text-lg"
         >
-          By Gagan Biswas
+          Back to home
         </Link>
       </div>
 
       <div className="my-5">
         <h2 className="text-xl mb-2 font-medium">Research:</h2>
         <ul className="text-lg list-disc list-inside space-y-1 indent-2">
-          <li className="dark:text-neutral-400 text-neutral-600">
-            Emotion Aware Conversational Agents (Work in progress)
+          <li>
+            <Link
+              href={"/work/llm-hallucinations"}
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+            >
+              Reducing LLM Hallucinations in Medical Question-Answering
+            </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (MSc project)
+            </span>
+          </li>
+          <li>
+            <Link
+              href={"/work/emotion-aware-agent"}
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+            >
+              Emotion-Aware Conversational Agent
+            </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (MSc dissertation)
+            </span>
           </li>
         </ul>
       </div>
@@ -29,13 +50,62 @@ const Work = () => {
         <ul className="text-lg list-disc list-inside space-y-1 indent-2">
           <li>
             <Link
-              href={"https://icons.gaganbiswas.com"}
+              href={"/work/whisper"}
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+            >
+              Whisper
+            </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (end-to-end encrypted chat)
+            </span>
+          </li>
+          <li>
+            <Link
+              href={"/work/struct-icons"}
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+            >
+              Struct Icons
+            </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (16x16 icon set)
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="my-5">
+        <h2 className="text-xl mb-2 font-medium">Freelance:</h2>
+        <ul className="text-lg list-disc list-inside space-y-1 indent-2">
+          <li>
+            <Link
+              href={"https://assentonline.com"}
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
             >
-              Icon Library
+              Assent
             </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (e-commerce platform, internal management system and mobile apps,
+              2024-2025)
+            </span>
+          </li>
+          <li className="list-inside">
+            <Link
+              href={"https://srisitaramvaidicasm.com"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:hover:decoration-neutral-500 transition-colors"
+            >
+              Sri Sitaram Vaidic Adarsha Sanskrit Mahavidyalaya
+            </Link>
+            <span className="dark:text-neutral-400 text-neutral-600">
+              {" "}
+              (college website redesign and admin management system, 2023-2024)
+            </span>
           </li>
         </ul>
       </div>

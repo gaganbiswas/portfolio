@@ -1,0 +1,56 @@
+import Image from "next/image";
+import Link from "next/link";
+import cover from "./cover.png";
+
+export const metadata = {
+  title: "Struct Icons | Gagan Biswas",
+  description: "A set of 214 pixel-perfect 16x16 icons, available in Figma and as React components.",
+};
+
+# Struct Icons
+
+<Link href="/work" className="mt-1 inline-block dark:text-neutral-400 text-neutral-600 text-lg">Back to work</Link>
+
+Struct Icons is a set of 214 icons I designed on a 16x16 grid. They're free to use. You can grab the [Figma file](https://www.figma.com/community/file/1316348606524341474/icons), install them from [npm](https://www.npmjs.com/package/@struct-ui/icons) as React components, or just browse them at [icons.gaganbiswas.com](https://icons.gaganbiswas.com) and click one to copy its SVG.
+
+<Image
+  src={cover}
+  alt="A dark grid of small line icons with the Struct UI Icons logo in the middle"
+  placeholder="blur"
+  className="w-full h-auto my-8 rounded-lg border border-neutral-300 dark:border-neutral-800"
+/>
+
+## Why 16x16
+
+Most icon sets are drawn at 24px and scaled down when you need them small. At 16px that means strokes land on half pixels and come out blurry, which is exactly the size I kept needing for buttons, menus and table rows. So I drew these at 16 from the start, with a 2px stroke, and lined everything up to whole pixels so they stay sharp at their actual size.
+
+## What's in it
+
+Mostly the everyday interface stuff: files, folders, users, settings, search, locks, phones, timers. There's also a full set of arrows and chevrons, media controls for play, pause, skip and volume, and a few brand logos like GitHub, Figma, Slack and X. Where it made sense I added a filled version too, so things like bookmark, heart and star have an on and off state.
+
+## Using them in React
+
+```bash
+npm install @struct-ui/icons
+```
+
+```jsx
+import { ArrowRight, Sun } from "@struct-ui/icons";
+
+function MyComponent() {
+  return (
+    <div>
+      <ArrowRight />
+      <Sun />
+    </div>
+  );
+}
+```
+
+The icons use `currentColor`, so they pick up whatever text color they're sitting in and there's nothing extra to theme. Each one also takes a `title` prop for screen readers.
+
+The React side is mostly automated. I export the SVGs from Figma, SVGR turns each one into a typed component, and Rollup bundles them into one package. Adding a new icon is basically drawing it, exporting it and publishing.
+
+## License
+
+The npm package is MIT and the Figma file is CC BY 4.0, so you're free to use them in personal or commercial work. The Figma license just asks for a credit. The source is on [GitHub](https://github.com/gaganbiswas/icons). If there's an icon you need that isn't in the set, [let me know](mailto:gaganbiswas.me1@gmail.com).
