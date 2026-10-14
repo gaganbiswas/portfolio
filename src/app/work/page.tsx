@@ -36,6 +36,14 @@ const Work = () => {
               {" "}
               (MSc project)
             </span>
+            <Link
+              href={"https://m-rag.gaganbiswas.com"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-fit ml-6 text-base dark:text-neutral-400 text-neutral-600 underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-300 dark:hover:text-neutral-200 transition-colors"
+            >
+              m-rag.gaganbiswas.com
+            </Link>
           </li>
           <li>
             <Link
@@ -66,6 +74,14 @@ const Work = () => {
               {" "}
               (end-to-end encrypted chat)
             </span>
+            <Link
+              href={"https://whisper.gaganbiswas.com"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-fit ml-6 text-base dark:text-neutral-400 text-neutral-600 underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-300 dark:hover:text-neutral-200 transition-colors"
+            >
+              whisper.gaganbiswas.com
+            </Link>
           </li>
           <li>
             <Link
@@ -78,6 +94,14 @@ const Work = () => {
               {" "}
               (16x16 icon set)
             </span>
+            <Link
+              href={"https://icons.gaganbiswas.com"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-fit ml-6 text-base dark:text-neutral-400 text-neutral-600 underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-300 dark:hover:text-neutral-200 transition-colors"
+            >
+              icons.gaganbiswas.com
+            </Link>
           </li>
           <li>
             <Link
@@ -90,6 +114,14 @@ const Work = () => {
               {" "}
               (online HTML, CSS and JS editor)
             </span>
+            <Link
+              href={"https://gaganbiswas.github.io/anglescript"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-fit ml-6 text-base dark:text-neutral-400 text-neutral-600 underline underline-offset-2 decoration-1 decoration-neutral-400 hover:decoration-neutral-300 dark:decoration-neutral-600 dark:hover:decoration-neutral-300 dark:hover:text-neutral-200 transition-colors"
+            >
+              gaganbiswas.github.io/anglescript
+            </Link>
           </li>
         </ul>
       </div>

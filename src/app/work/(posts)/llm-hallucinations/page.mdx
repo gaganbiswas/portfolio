@@ -15,6 +15,8 @@ export const metadata = {
 
 <p className="my-5 text-lg dark:text-neutral-400 text-neutral-600">Cameron Wishart, Valentin Peron, Gagan Biswas, Antoine Esman, Matthias von Rakowski, Arne Jacobs and Adrien Jacquot<br />Heriot-Watt University</p>
 
+You can try the chatbot at [m-rag.gaganbiswas.com](https://m-rag.gaganbiswas.com).
+
 ## Abstract
 
 Large language models can produce both strong and accurate answers in almost any subject. However, they often generate incorrect or factually unfounded responses. These inaccurate generations are called hallucinations, and they pose a critical risk when implemented in sensitive domains such as healthcare. This paper presents a medical chatbot, designed to ground responses of the large language model with the content of the NHS UK website. The system utilises a configuration-driven Retrieval-Augmented Generation (RAG) pipeline. This architecture incorporates a late adaptive chunking strategy, semantic retrieval via a vector database and a cross-encoder reranker. To ensure medical safety and factual grounding, the pipeline integrates an intent classifier, an LLM-as-a-Judge to verify response content and additional guardrails that evaluate reliability before displaying the response. Responses outside the scope of NHS knowledge are handled with a refusal mechanism. Evaluation is conducted through automated testing using LLM-as-a-Judge and human analysis of responses. The results demonstrated high faithfulness with 92% accuracy to the provided context, strong refusal and conversational capabilities.
